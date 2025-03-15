@@ -3,16 +3,18 @@
 
 #include <iostream>
 #include <set>
-#define REP(i, n) for (int i=1; i<=(int)(n); i++)
+
 using namespace std;
 
 int main() {
-    int N, a[100];
-    cin >> N;
-    REP(i, N) cin >> a[i];
-
-    set<int> values;
-    REP(i, N) values.insert(a[i]);
-
-    cout << values.size() << endl;
+    int n;
+    cin >> n;
+    set<int> diameters;
+    for (int i = 0; i < n; ++i) {
+        int d;
+        cin >> d;
+        diameters.insert(d);
+    }
+    cout << diameters.size() << endl;
+    return 0;
 }
